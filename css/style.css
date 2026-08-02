@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     border: 0;
+    box-sizing: border-box;
 }
 
 html,
@@ -48,7 +49,7 @@ header {
     z-index: 1000;
 
     width: 100%;
-    height: 5rem;
+    height: 8rem;
     padding: 1rem;
 
     background-color: rgb(65, 27, 1);
@@ -62,8 +63,8 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    margin-top: 1rem;
+    gap: 1rem;
+    margin-top: 2cqmin;
 }
 
 nav a {
@@ -92,51 +93,9 @@ body {
 
 }
 
-/* CARDÁPIO */
+/* SEÇÕES (cardápio, sobremesas, bebidas) */
 
-.cardapio {
-    width: 90%;
-    margin: 3rem auto;
-    text-align: center;
-}
-
-.cardapio h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-}
-
-.cardapio p {
-    font-size: 1.2rem;
-    margin-bottom: 3rem;
-}
-
-.lista-pratos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.lista-pratos figure {
-    width: 20rem;
-}
-
-.imagem-cardapio {
-    width: 60%;
-    height: auto;
-    border-radius: 1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.imagem-cardapio:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-}
-
- /* LAYOUT */
-
-.cardapio,
-.sobremesas,.bebidas {
+.secao {
     border: 2px solid #8B4513;
     border-radius: 1.5rem;
     padding: 2rem;
@@ -144,88 +103,42 @@ body {
     margin-top: 1rem;
     width: 90%;
     background-color: #fffaf5;
-}
-
-/* SOBREMESAS */
-
-.sobremesas {
-    width: 90%;
-    margin: 3rem auto;
     text-align: center;
 }
 
-.sobremesas h3 {
+.secao h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
-.sobremesas p {
+.secao p {
     font-size: 1.2rem;
     margin-bottom: 3rem;
 }
 
-.lista-sobremesas {
+.secao .lista-pratos,
+.secao .lista-sobremesas,
+.secao .lista-bebidas {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
 }
 
-.lista-sobremesas figure {
+.secao figure {
     width: 20rem;
 }
 
-.imagem-sobremesa {
+.imagem-item {
     width: 60%;
     height: auto;
     border-radius: 1rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.imagem-sobremesa:hover {
+.imagem-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-}
-
-/* BEBIDAS */
-
-.bebidas {
-    width: 90%;
-    margin: 3rem auto;
-    text-align: center;
-}
-
-.bebidas h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-}
-
-.bebidas p {
-    font-size: 1.2rem;
-    margin-bottom: 3rem;
-}
-
-.lista-bebidas {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.lista-bebidas figure {
-    width: 20rem;
-}
-
-.imagem-bebida {
-    width: 60%;
-    height: auto;
-    border-radius: 1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.imagem-bebida:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 /* RODAPÉ */
@@ -241,3 +154,50 @@ footer {
 footer p {
     font-size: 0.8rem;
 }
+
+/* MEDIA QUERY */
+
+@media (max-width: 600px) {
+
+    header {
+        height: auto;
+        padding: 1rem 0.5rem;
+        position: static;
+    }
+
+    .logo-restaurante {
+        position: static;
+        transform: none;
+        width: 100px;
+        margin-bottom: 0.5rem;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+        max-width: 100%;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    body {
+        padding-top: 0;
+    }
+
+    .secao figure {
+        width: 100%;
+        max-width: 16rem;
+    }
+
+    .imagem-item {
+        width: 80%;
+    }
+}
+
