@@ -10,11 +10,12 @@ Projeto desenvolvido como prática dos estudos de HTML5 e CSS3 durante o curso d
 
 ## Funcionalidades
 
-* Cabeçalho fixo
+* Cabeçalho com navegação por âncoras
 * Seções de Cardápio, Sobremesas e Bebidas
 * Galeria de imagens dos pratos
 * Layout organizado com Flexbox
 * Rodapé com informações de contato
+* Layout responsivo, adaptado para dispositivos móveis
 
 ## Objetivo
 
@@ -26,3 +27,11 @@ Este projeto faz parte da minha evolução como estudante de Análise e Desenvol
 ## Preview
 
 ![Página inicial do Restaurante Campo Belo](screenshot-home.png)
+
+
+## Changelog
+
+### v2 - 02/08/2026
+* Corrigido bug no favicon e ativados os links do menu (âncoras)
+* CSS unificado (DRY) com as classes `.secao` e `.imagem-item`
+* Adicionada responsividade mobile: header com `position: static`, menu com `flex-wrap`, `box-sizing: border-box` para corrigir a largura das seções e o `max-width` impediu o menu de vazar da tela.
